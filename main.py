@@ -3,12 +3,17 @@ class Car():
     self.name = name
     self.color = color
     self.year = year
+    print('Add Car')
 
   def drive (self):
-    print('Car driving')
+    print(self.name + 'Car driving')
 
-opel_car = Car('Opel','Blue','1993')
-opel_car.drive()
-print(opel_car.name)
-print(opel_car.color)
-print(opel_car.year)
+  def change_color (self, new_color):
+        self.color = new_color
+#Передаем методы класса предка
+class Car_2(Car):
+  def __init__(self, name, color, year):
+    Car.__init__(self, name, color, year)
+    print('Add Car_2')
+
+man_car = Car_2 ('Man','Blue','1939')
