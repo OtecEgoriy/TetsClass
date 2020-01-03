@@ -7,7 +7,7 @@ class Car():
   def drive (self):
     print('Car driving')
 
-opel_car = ('Opel','Blue','1993')
+opel_car = Car('Opel','Blue','1993')
 opel_car.drive()
 print(opel_car.name)
 print(opel_car.color)
